@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../assets/Edublocks.png";
+import logo from "../assets/thatha.png";
 import "../styles/Navbar.css";
 import { UserContext } from "../UserContext";
 
@@ -14,7 +14,7 @@ const Navigation = () => {
     <Navbar bg="light">
       <Link to="/">
         <Navbar.Brand>
-          <img alt="" src={logo} width="30" height="30" className="d-inline-block align-top" /> Edublocks
+          <img alt="" src={logo} width="30" height="30" className="d-inline-block align-top" /> SkillHive
         </Navbar.Brand>
       </Link>
       {id.id === null ? (
