@@ -1,0 +1,122 @@
+.course-results {
+  justify-content: center;
+  align-items: center;
+}
+
+.course-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: auto;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e9ecef;
+}
+
+.course-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  border-color: #007BFF;
+}
+
+.course-img {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.course-img img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.course-content {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  flex-direction: column;
+  padding: 24px;
+  text-align: left;
+  gap: 12px;
+}
+
+.course-content button {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  margin-top: 8px;
+}
+
+.course-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.course-content button:active {
+  transform: translateY(0);
+}
+
+#course-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+#course-desc {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+#course-subs,
+#course-price,
+#course-author {
+  font-size: 0.9rem;
+  color: #495057;
+  margin: 0;
+  font-weight: 500;
+}
+
+#course-subs .badge,
+#course-price .badge,
+#course-author .badge {
+  padding: 4px 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .course-card {
+    grid-template-columns: 1fr;
+  }
+
+  .course-img {
+    min-height: 200px;
+    padding: 16px;
+  }
+
+  .course-content {
+    padding: 20px;
+  }
+
+  #course-title {
+    font-size: 1.1rem;
+  }
+
+  #course-desc {
+    font-size: 0.9rem;
+  }
+}

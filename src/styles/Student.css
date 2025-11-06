@@ -1,0 +1,539 @@
+.student-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: calc(100vh - 200px);
+  padding: 30px 20px;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.student-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.left-tabs-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.left-tabs-nav .nav-link {
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #495057;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.left-tabs-nav .nav-link:hover {
+  background-color: #fff;
+  color: #007BFF;
+  border-color: #007BFF;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  transform: translateX(4px);
+}
+
+.left-tabs-nav .nav-link.active {
+  background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+  color: white;
+  border-color: #007BFF;
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.3);
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tab-pane-content {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.courses-section h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #007BFF;
+  display: inline-block;
+  animation: fadeInDown 0.4s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f0f0f0;
+  border-top: 4px solid #007BFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 16px;
+}
+
+.loading-text {
+  font-size: 1.1rem;
+  color: #6c757d;
+  font-weight: 600;
+  margin: 0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.empty-state i {
+  font-size: 3.5rem;
+  color: #dee2e6;
+  margin-bottom: 16px;
+}
+
+.empty-state h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.empty-state .btn {
+  padding: 10px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.empty-state .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.payments-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.5s ease-out forwards;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.balance-display {
+  background: linear-gradient(135deg, #00b09b 0%, #007BFF 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(0, 176, 155, 0.3);
+  animation: slideInUp 0.5s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.balance-display::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.balance-info {
+  position: relative;
+  z-index: 1;
+}
+
+.balance-label {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.balance-display .balance-badge {
+  font-size: 2rem;
+  padding: 12px 20px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: 2px solid white;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.token-purchase-form {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  animation: slideInUp 0.5s ease-out 0.1s both;
+}
+
+.form-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.token-input {
+  height: 50px;
+  font-size: 1rem;
+  padding: 12px 16px;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  width: 100%;
+}
+
+.token-input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.token-input:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.conversion-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.conversion-badge {
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f6ff 0%, #e3f2fd 100%);
+  border: 2px solid #bee5eb;
+  transition: all 0.3s ease;
+}
+
+.conversion-badge:hover {
+  border-color: #007BFF;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+.conversion-label {
+  margin: 0 0 8px 0;
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.conversion-value {
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  font-weight: 700;
+}
+
+.purchase-button {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.purchase-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.purchase-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.purchase-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .left-tabs-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .left-tabs-nav .nav-link {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+
+  .courses-section h4 {
+    font-size: 1.5rem;
+  }
+
+  .conversion-display {
+    grid-template-columns: 1fr;
+  }
+
+  .payments-section {
+    padding: 20px;
+  }
+
+  .student-container {
+    padding: 20px 15px;
+  }
+
+  .balance-display {
+    padding: 24px;
+  }
+
+  .empty-state {
+    padding: 40px 16px;
+  }
+
+  .empty-state i {
+    font-size: 2.5rem;
+  }
+
+  .loading-container {
+    padding: 40px 16px;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .left-tabs-nav {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .left-tabs-nav .nav-link {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  .courses-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  .payments-section {
+    padding: 16px;
+  }
+
+  .token-purchase-form {
+    padding: 16px;
+  }
+
+  .student-container {
+    padding: 15px 10px;
+  }
+
+  .balance-display {
+    padding: 20px;
+  }
+
+  .balance-display .balance-badge {
+    font-size: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.1rem;
+    gap: 8px;
+  }
+
+  .conversion-display {
+    gap: 12px;
+  }
+
+  .conversion-badge {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+
+  .token-input {
+    height: 45px;
+    font-size: 0.95rem;
+  }
+
+  .purchase-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .empty-state {
+    padding: 30px 12px;
+  }
+
+  .empty-state i {
+    font-size: 2rem;
+  }
+
+  .empty-state h5 {
+    font-size: 1.2rem;
+  }
+
+  .empty-state p {
+    font-size: 0.9rem;
+  }
+
+  .loading-container {
+    padding: 30px 12px;
+  }
+
+  .loading-text {
+    font-size: 1rem;
+  }
+}
